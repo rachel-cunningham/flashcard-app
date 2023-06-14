@@ -1,0 +1,26 @@
+.deck-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.left-section {
+  margin-left: 10px;
+}
+.right-section {
+  margin-right: 10px;
+}
+.headings {
+  display: flex;
+  justify-content: space-between;
+}
+.card-wrap {
+  border: 1px solid lightgrey;
+  width: 48%;
+  margin: 10px;
+}
+.card-b {
+  margin: 10px;
+}

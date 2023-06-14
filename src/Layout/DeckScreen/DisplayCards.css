@@ -1,0 +1,16 @@
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.card-c {
+  border: 1px solid grey;
+  width: 48%;
+}
+.text {
+  margin: 20px;
+  margin-top: 10px;
+}
+.spacer {
+  margin-bottom: 25px;
+}

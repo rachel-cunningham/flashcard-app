@@ -1,0 +1,13 @@
+.form-style {
+  box-sizing: border-box;
+  width: 260%;
+  padding: 17px 10px;
+  margin: 19px 0;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.c-buttons {
+  display: flex;
+}

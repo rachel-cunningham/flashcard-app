@@ -1,0 +1,19 @@
+/* .btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  cursor: pointer;
+  border-radius: 5px;
+} */
+.button-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
