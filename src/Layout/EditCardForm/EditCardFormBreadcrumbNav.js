@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function EditCardFormBreadcrumbNav({ deckToEdit, cardToEdit }) {
   let index =
     deckToEdit?.cards?.findIndex((card) => card.id === cardToEdit.id) + 1;
-  console.log(index);
   return (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">

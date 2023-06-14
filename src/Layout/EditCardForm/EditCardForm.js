@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom/";
 import { readCard, readDeck, updateCard } from "../../utils/api";
 import EditCardFormBreadcrumbNav from "./EditCardFormBreadcrumbNav";
+import CardForm from "../CardForm/Form";
 
 function EditCardForm() {
   const deckId = useParams().deckId;
@@ -39,30 +40,11 @@ function EditCardForm() {
       ></EditCardFormBreadcrumbNav>
       <h2>Edit Card</h2>
       <form onSubmit={handleEditCardSubmit}>
-        <div>
-          <label htmlFor="frontOfCard">Front:</label>
-          <textarea
-            name="front"
-            type="text"
-            className="form-style"
-            id="front"
-            rows="3"
-            onChange={handleFrontCardChange}
-            defaultValue={cardToEdit.front}
-          ></textarea>
-        </div>
-        <div>
-          <label htmlFor="backOfCard">Back:</label>
-          <textarea
-            id="back"
-            name="back"
-            type="text"
-            className="form-style"
-            rows="5"
-            onChange={handleBackCardChange}
-            defaultValue={cardToEdit.back}
-          ></textarea>
-        </div>
+        <CardForm
+          cardToEdit={cardToEdit}
+          handleFrontCardChange={handleFrontCardChange}
+          handleBackCardChange={handleBackCardChange}
+        ></CardForm>
         <button
           type="button"
           className="btn btn-secondary"

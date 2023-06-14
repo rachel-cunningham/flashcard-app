@@ -30,7 +30,7 @@ function EditDeckForm() {
     event.preventDefault();
     deckToEdit.name = deckName;
     deckToEdit.description = deckDescription;
-    const res = await updateDeck(deckToEdit);
+    await updateDeck(deckToEdit);
     history.push(`/decks/${deckToEdit.id}`);
   };
 

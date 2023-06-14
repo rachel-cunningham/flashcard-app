@@ -6,7 +6,7 @@ function EditDeckButton({ deck }) {
   const history = useHistory();
   return (
     <a
-      class="btn btn-secondary mr-1 button-margin"
+      className="btn btn-secondary mr-1 button-margin"
       href={`/decks/${deck.id}/edit`}
     >
       Edit

@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom/";
 import { readDeck, createCard } from "../../utils/api";
 import AddCardBreadcrumbNav from "./AddCardBreadcrumbNav";
+import CardForm from "../CardForm/Form";
 
 function AddCardsScreen() {
+  const ref = React.useRef();
   const deckId = useParams().deckId;
   const [deckToAdd, setDeckToAdd] = useState([]);
   const history = useHistory();
@@ -25,7 +27,8 @@ function AddCardsScreen() {
     event.preventDefault();
     const response = await createCard(deckId, formData);
     setFormData({ ...initialFormState });
-    // history.push(`/decks/${deckId}/cards/new`);
+    ref.current.reset();
+    history.push(`/decks/${deckId}/cards/new`);
   };
 
   // Loading the matching deck from the API
@@ -41,8 +44,13 @@ function AddCardsScreen() {
     <div>
       <AddCardBreadcrumbNav deckToAdd={deckToAdd}></AddCardBreadcrumbNav>
       <h2>{deckToAdd.name}: Add Card </h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form ref={ref} onSubmit={handleSubmit}>
+        <CardForm
+          cardToEdit={formData}
+          handleFrontCardChange={handleChange}
+          handleBackCardChange={handleChange}
+        ></CardForm>
+        {/* <div>
           <label htmlFor="frontCard">Front: </label>
           <textarea
             name="front"
@@ -66,7 +74,7 @@ function AddCardsScreen() {
             placeholder="Back side of card"
             value={formData.back}
           ></textarea>
-        </div>
+        </div> */}
         <button
           type="button"
           className="btn btn-secondary"
