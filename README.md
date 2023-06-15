@@ -11,9 +11,9 @@ This app allows a user to create a deck of flashcards to study from. The user is
 
 ### **How to Install and Run the Project**
 
-git clone 
-npm install 
-npm start
+- [] [git clone](https://github.com/rachel-cunningham/flashcard-app.git)
+- [] npm install 
+- [] npm start
 
 
 ### **Technology**
