@@ -6,4 +6,5 @@ This app allows a user to create a deck of flashcards to study from. The user is
 * Implemented React Hooks and React Router to manage API calls for data and component routing, respectively
 
 **Future Goals**
-*Add access rights to limit who can delete decks and/or cards. 
+
+* Add access rights to limit who can delete decks and/or cards. 
