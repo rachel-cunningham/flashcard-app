@@ -8,11 +8,10 @@ function DeleteDeckButton({ deck }) {
   //a warning message is shown and the user can click OK or Cancel.
   const handleDeleteClick = async () => {
     if (
-      window.confirm ===
-      true("Delete this deck? You will not be able to recover it.")
+      window.confirm("Delete this deck? You will not be able to recover it.")
     ) {
       const resp = await deleteDeck(deck.id);
-      history.push(`/decks/`);
+      window.location.reload();
     }
   };
 
