@@ -7,7 +7,7 @@ This app allows a user to create a deck of flashcards to study from. The user is
 
 ### **Demo**
 
-[demo of the app] (flashcard-project-zeta.vercel.app)
+[demo of the app](flashcard-project-zeta.vercel.app)
 
 #### **How to Install and Run the Project**
 
